@@ -1,4 +1,4 @@
-# .github/tests/requirements.txt - Consolidated test dependencies
+# .github/tests/requirements.txt - Assignment 6
 
 # Testing
 pytest
