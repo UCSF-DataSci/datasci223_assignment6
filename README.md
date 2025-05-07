@@ -84,12 +84,10 @@ Goals:
 ## Framework Options
 
 1. **TensorFlow/Keras**:
-   - Recommended for beginners
    - Simpler syntax and more examples
    - Save models as `.keras` files
 
 2. **PyTorch**:
-   - More flexible and powerful
    - Better for research and customization
    - Save models as `.pt` files with architecture in separate `.txt` file
 
