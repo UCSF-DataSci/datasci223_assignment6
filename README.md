@@ -10,7 +10,7 @@ This assignment introduces neural networks and their applications in healthcare 
 
 ## Learning Objectives
 
-- Implement and train neural networks using TensorFlow/Keras
+- Implement and train neural networks using TensorFlow/Keras and/or Pytorch
 - Apply CNNs for image classification
 - Work with time series data using RNNs
 - Evaluate model performance using appropriate metrics
@@ -19,11 +19,13 @@ This assignment introduces neural networks and their applications in healthcare 
 ## Setup
 
 1. **Install Dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 2. **Directory Structure**:
+
    ```
    datasci223_assignment6/
    ├── models/              # Saved models
@@ -46,14 +48,24 @@ This assignment introduces neural networks and their applications in healthcare 
 - Save model as `models/emnist_classifier.keras`
 - Save metrics in `results/part_1/emnist_classifier_metrics.txt`
 
+Goals:
+- Achieve > 80% accuracy on test set
+- Minimize overfitting using dropout
+- Train efficiently with appropriate batch size
+
 ## Part 2: CNN Classification
 
 - Implement a CNN for EMNIST classification
 - Choose between TensorFlow/Keras or PyTorch
 - Save model as:
-  - TensorFlow: `models/cnn_keras.keras`
-  - PyTorch: `models/cnn_pytorch.pt` and `models/cnn_pytorch_arch.txt`
+    - TensorFlow: `models/cnn_keras.keras`
+    - PyTorch: `models/cnn_pytorch.pt` and `models/cnn_pytorch_arch.txt`
 - Save metrics in `results/part_2/cnn_{framework}_metrics.txt`
+
+Goals:
+- Achieve > 85% accuracy on test set
+- Minimize overfitting using batch normalization and dropout
+- Train efficiently with appropriate batch size and learning rate
 
 ## Part 3: ECG Analysis
 
@@ -62,53 +74,12 @@ This assignment introduces neural networks and their applications in healthcare 
 - Save model as `models/ecg_classifier_{model_type}.keras`
 - Save metrics in `results/part_3/ecg_classifier_{model_type}_metrics.txt`
 
-## Submission Requirements
-
-1. **Code Organization**:
-   - Complete all three parts
-   - Follow the provided directory structure
-   - Include all required files
-
-2. **Model Files**:
-   - Part 1: `models/emnist_classifier.keras`
-   - Part 2: Either `models/cnn_keras.keras` or `models/cnn_pytorch.pt` + `models/cnn_pytorch_arch.txt`
-   - Part 3: `models/ecg_classifier_{model_type}.keras`
-
-3. **Metrics Files**:
-   - Part 1: `results/part_1/emnist_classifier_metrics.txt`
-   - Part 2: `results/part_2/cnn_{framework}_metrics.txt`
-   - Part 3: `results/part_3/ecg_classifier_{model_type}_metrics.txt`
-
-4. **Metrics Format**:
-   ```
-   model: model_name
-   accuracy: float
-   precision: float
-   recall: float
-   f1_score: float
-   confusion_matrix: [[TN, FP], [FN, TP]]
-   ----
-   ```
-
-## Intended Endpoint
-
-1. **Part 1 (Basic NN)**:
-   - Accuracy > 80% on test set
-   - Must use at least 2 dense layers
-   - Must include dropout layers
-   - Must use categorical crossentropy loss
-
-2. **Part 2 (CNN)**:
-   - Accuracy > 85% on test set
-   - Must use at least 2 convolutional layers
-   - Must include pooling and batch normalization
-   - Must use categorical crossentropy loss
-
-3. **Part 3 (ECG)**:
-   - Accuracy > 75% on test set
-   - AUC > 0.80
-   - F1-score > 0.70
-   - Must use appropriate architecture (simple NN or RNN)
+Goals:
+- Achieve > 75% accuracy on test set
+- Achieve AUC > 0.80
+- Achieve F1-score > 0.70
+- Minimize overfitting using appropriate techniques
+- Train efficiently with appropriate batch size
 
 ## Framework Options
 
